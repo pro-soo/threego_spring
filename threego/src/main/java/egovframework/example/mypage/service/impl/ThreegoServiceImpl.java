@@ -92,10 +92,16 @@ public class ThreegoServiceImpl extends EgovAbstractServiceImpl implements Three
 	}
 	
 	@Override
+	public List<?> selectNoticeDetailList(int n_postnum) throws Exception {	// 공지사항 내용 리스트
+		return threegoDAO.selectNoticeDetailList(n_postnum);
+	}
+	
+	@Override
 	public void insertBoard(LoginVO loginVO) throws Exception {
 		// TODO Auto-generated method stub
 		
 	}
+
 
 
 

@@ -18,6 +18,9 @@
 	<select id="selectNoticeList" parameterType="String" resultType="NoticeVO">
 		select * from notice where r_id=#{r_id}
 	</select>
+	<select id="selectNoticeDetailList" parameterType="Integer" resultType="NoticeVO">
+		select * from notice where n_postnum=#{n_postnum}
+	</select>
 	
 	<!-- 
 	<select id="selectSampleList" parameterType="searchVO" resultType="egovMap">

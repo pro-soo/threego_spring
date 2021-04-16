@@ -118,6 +118,24 @@ public class ThreegoController {
 		
 	}
 	
+	@RequestMapping(value="/noticeDetail.do")
+	public void noticeDetailList(NoticeVO noticeVO, HttpServletRequest request, HttpServletResponse response) throws Exception{
+		int n_postnum = Integer.parseInt(request.getParameter("n_postnum"));
+		noticeVO.setN_postnum(n_postnum);
+		
+		List<?> list = threegoService.selectNoticeDetailList(n_postnum);
+		
+		Gson json = new Gson();
+		String notice_de = json.toJson(list);
+		System.out.println(notice_de);
+		
+		response.setContentType("text/plain;charset=UTF-8");
+		PrintWriter out = response.getWriter();
+		out.print(notice_de);
+		System.out.println("notice_de");
+	}
+
+	
 	
 }
 

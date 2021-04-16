@@ -45,7 +45,7 @@ public interface ThreegoMapper {	// DAO
 	List<?> selectDeliveryList(DeliveryVO deliveryVO) throws Exception; // 배달 List
 	List<?> selectCallList(String r_id) throws Exception; // 콜 List
 	List<?> selectNoticeList(String r_id) throws Exception; // 공지사항 List
-	
+	List<?> selectNoticeDetailList(int n_postnum) throws Exception; // 공지사항  내용 List
 	
 	void insertBoard(LoginVO loginVO) throws Exception;
 }
